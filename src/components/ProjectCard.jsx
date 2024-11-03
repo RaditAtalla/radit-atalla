@@ -1,5 +1,4 @@
 import React from "react";
-import TechUsedCard from "./TechUsedCard";
 
 const ProjectCard = ({ image, imageAlt, title, date, techs = [{}] }) => {
   return (

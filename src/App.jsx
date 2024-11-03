@@ -2,7 +2,6 @@ import AchievementCard from "./components/AchievementCard";
 import ProjectCard from "./components/ProjectCard";
 import SkillCard from "./components/SkillCard";
 import TechStack from "./components/TechStack";
-import TechUsedCard from "./components/TechUsedCard";
 
 const App = () => {
   return (
