@@ -6,7 +6,7 @@ const ProjectCard = ({ image, imageAlt, title, date, techs = [{}] }) => {
       <img
         src={image}
         alt={imageAlt}
-        className="w-[100%] h-[150px] object-cover rounded-t-[5px]"
+        className="h-[150px] object-cover rounded-t-[5px]"
       />
       <div className="p-[20px] flex justify-between">
         <div className="flex flex-col gap-[10px]">
