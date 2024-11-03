@@ -58,21 +58,16 @@ const App = () => {
           <p className="font-medium text-[1.5rem] opacity-50">Achievements</p>
         </div>
         <div className="flex flex-col gap-[30px]">
-          {/* 
-            [{tech: react, techImg: react.jpg}, {tech: tailwind, techImg: tailwind.jpg}]
-          */}
-          <ProjectCard image={"img/web1.png"} date={"2 Nov 2024"} imageAlt={"Portofolio website"} title={"Portofolio Website"}>
-            <TechUsedCard image={"img/react.svg"} title={"ReactJS"} />
-            <TechUsedCard image={"img/tailwind.svg"} title={"TailwindCSS"} />
-          </ProjectCard>
-          <ProjectCard image={"img/web1.png"} date={"2 Nov 2024"} imageAlt={"Portofolio website"} title={"Portofolio Website"}>
-            <TechUsedCard image={"img/react.svg"} title={"ReactJS"} />
-            <TechUsedCard image={"img/tailwind.svg"} title={"TailwindCSS"} />
-          </ProjectCard>
-          <ProjectCard image={"img/web1.png"} date={"2 Nov 2024"} imageAlt={"Portofolio website"} title={"Portofolio Website"}>
-            <TechUsedCard image={"img/react.svg"} title={"ReactJS"} />
-            <TechUsedCard image={"img/tailwind.svg"} title={"TailwindCSS"} />
-          </ProjectCard>
+          <ProjectCard
+            title={"Portofolio Webiste"}
+            date={"2 Nov 2024"}
+            techs={[
+              { tech: "ReactJS", techImg: "img/react.svg" },
+              { tech: "TailwindCSS", techImg: "img/tailwind.svg" },
+            ]}
+            image={"img/web1.png"}
+            imageAlt={"Portofolio website"}
+          />
         </div>
       </div>
     </div>

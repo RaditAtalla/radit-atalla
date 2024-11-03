@@ -1,13 +1,7 @@
 import React from "react";
 import TechUsedCard from "./TechUsedCard";
 
-const ProjectCard = ({
-  image,
-  imageAlt,
-  title,
-  children,
-  date,
-}) => {
+const ProjectCard = ({ image, imageAlt, title, date, techs = [{}] }) => {
   return (
     <div className="bg-cyanOpacity5 rounded-[10px] border-[3px] border-cyanOpacity divide-y-2 divide-cyanOpacity">
       <div className="h-[55%]">
@@ -20,8 +14,18 @@ const ProjectCard = ({
       <div className="h-[45%] p-[20px] flex justify-between">
         <div className="flex flex-col gap-[10px]">
           <h3 className="font-bold text-[1.5rem]">{title}</h3>
-          <div className="flex flex-wrap gap-[10px] max-w-[90%]">
-            {children}
+          <div className="flex flex-wrap gap-[10px] max-w-[90%] mb-[20px]">
+            {techs.map((tech, i, techs) => {
+              return(
+                <div className="inline-flex items-center bg-cyanOpacity10 rounded-full px-[10px] py-[5px]">
+                  <img
+                    src={techs[i].techImg}
+                    className="w-[15px] h-[15px]"
+                  />
+                  <p className="text-[10px]">{techs[i].tech}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
         <div className="min-w-[10%]">
