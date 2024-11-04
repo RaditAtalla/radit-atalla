@@ -8,13 +8,13 @@ const App = () => {
   const [page, setPage] = useState(false);
 
   return (
-    <div className="flex px-[70px] py-[70px]">
+    <div className="flex flex-col xl:flex-row px-[30px] xl:px-[70px] py-[70px]">
       {/* left side */}
-      <div className="w-[50%]">
-        <div className="fixed">
+      <div className="mb-[50px] xl:w-[50%] xl:mb-0">
+        <div className="xl:fixed">
           <div className="mb-[60px]">
             <h1 className="text-[3rem] font-bold">Hello, i am Radit</h1>
-            <div className="flex gap-[10px]">
+            <div className="flex gap-[10px] flex-wrap">
               <SkillCard
                 title={"Frontend"}
                 circleColor={"bg-[#F16529]"}
@@ -43,9 +43,9 @@ const App = () => {
               <p>📍 Bandung, Indonesia</p>
             </div>
           </div>
-          <div className="mb-[90px]">
+          <div className="mb-[20px]">
             <h2 className="font-medium text-[1.5rem] mb-[10px]">Tech Stack</h2>
-            <div className="bg-cyanOpacity5 flex gap-[20px] justify-center rounded-[10px] py-[30px] px-[20px]">
+            <div className="bg-cyanOpacity5 flex flex-wrap gap-[20px] justify-center rounded-[10px] py-[30px] px-[20px]">
               <TechStack title={"React"} image={"img/react.svg"} />
               <TechStack title={"TailwindCSS"} image={"img/tailwind.svg"} />
               <TechStack title={"ExpressJS"} image={"img/express.svg"} />
@@ -54,21 +54,21 @@ const App = () => {
             </div>
           </div>
           <div className="flex justify-between items-center">
-            <p className="font-light text-[14px]">
+            <p className="font-light text-[12px] md:text-[14px]">
               Copyright © 2024 Raditya A. Rachmadie
             </p>
             <div className="flex gap-[10px]">
               <a
                 href="https://www.linkedin.com/in/radityaatalla/"
                 target="_blank"
-                className="font-light text-[14px] underline"
+                className="font-light text-[12px] md:text-[14px] underline"
               >
                 LinkedIn
               </a>
               <a
                 href="https://github.com/RaditAtalla"
                 target="_blank"
-                className="font-light text-[14px] underline"
+                className="font-light text-[12px] md:text-[14px] underline"
               >
                 Github
               </a>
@@ -77,10 +77,10 @@ const App = () => {
         </div>
       </div>
       {/* right side */}
-      <div className="flex flex-col gap-[30px] w-[50%]">
-        <div className="flex gap-[30px] mb-[30px]">
+      <div className="flex flex-col gap-[30px]">
+        <div className="flex gap-[30px]">
           <p
-            className={`font-medium text-[1.5rem] mb-[10px] cursor-pointer transition-opacity ${
+            className={`font-medium text-[1.25rem] md:text-[1.5rem] mb-[10px] cursor-pointer transition-opacity ${
               page && "opacity-50 hover:opacity-75"
             }`}
             onClick={() => setPage(!page)}
@@ -88,7 +88,7 @@ const App = () => {
             My Projects
           </p>
           <p
-            className={`font-medium text-[1.5rem] mb-[10px] cursor-pointer transition-opacity ${
+            className={`font-medium text-[1.25rem] md:text-[1.5rem] mb-[10px] cursor-pointer transition-opacity ${
               page == false && "opacity-50 hover:opacity-75"
             }`}
             onClick={() => setPage(!page)}

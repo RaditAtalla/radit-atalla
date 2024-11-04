@@ -6,6 +6,7 @@ const ProjectCard = ({ image, imageAlt, title, date, techs = [{}] }) => {
       <img
         src={image}
         alt={imageAlt}
+        loading="lazy"
         className="h-[150px] object-cover rounded-t-[5px]"
       />
       <div className="p-[20px] flex justify-between">
