@@ -2,7 +2,7 @@ import React from "react";
 
 const ProjectCard = ({ image, imageAlt, title, date, techs = [{}] }) => {
   return (
-    <div className="bg-cyanOpacity5 rounded-[10px] border-[3px] border-cyanOpacity divide-y-2 divide-cyanOpacity">
+    <div className="bg-cyanOpacity5 rounded-[10px] border-[3px] border-cyanOpacity hover:border-[#3D7D9E] group cursor-pointer transition divide-y-2 divide-cyanOpacity">
       <img
         src={image}
         alt={imageAlt}
@@ -11,11 +11,11 @@ const ProjectCard = ({ image, imageAlt, title, date, techs = [{}] }) => {
       />
       <div className="p-[20px] flex justify-between">
         <div className="flex flex-col gap-[10px]">
-          <h3 className="font-bold text-[1.5rem]">{title}</h3>
+          <h3 className="font-bold text-[1.5rem] group-hover:underline">{title}</h3>
           <div className="flex flex-wrap gap-[10px] max-w-[90%]">
             {techs.map((tech, i, techs) => {
               return (
-                <div className="inline-flex items-center bg-cyanOpacity10 rounded-full px-[10px] py-[5px]">
+                <div className="inline-flex hover:bg-[#3D7D9E] transition-colors cursor-auto items-center bg-cyanOpacity10 rounded-full px-[10px] py-[5px]">
                   <img src={techs[i].techImg} className="w-[15px] h-[15px]" />
                   <p className="text-[10px]">{techs[i].tech}</p>
                 </div>
